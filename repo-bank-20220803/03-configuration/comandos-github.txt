@@ -1,0 +1,12 @@
+-PARA CLONAR EL REPOSITORIO GITHUB EN EL ENTORNO LOCAL
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+git clone https://github.com/ocandelc/bootcamp
+
+-PARA TRAER OBJETOS DEL REPOSITORIO GITHUB HACIA EL ENTORNO LOCAL
+git pull
+
+-PARA ENVIAR OBJETOS DEL ENTORNO LOCAL AL REPOSITORIO GITHUB
+git add *
+git config --global user.email "erick.candela@gmail.com"
+git commit -m "microservice-master - rest create."
+git -c http.sslVerify=false push
