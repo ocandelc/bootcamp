@@ -1,0 +1,27 @@
+readall
+url - get
+http://localhost:8081/api/productbills
+
+create
+url - post
+http://localhost:8081/api/productbills
+pre-request-script
+const dateNow= new Date();
+pm.environment.set('currentDate', dateNow.toISOString());
+body-raw-json
+{ "id" : 2, "code" : "PB-002", "name" : "Corriente", "description" : "Cuenta Corriente" , "ruleMoveState" : "0", "ruleMoveNumber" : "", "state" : "1", "auditUserCreateName" : "oecandela", "auditUserCreateDate" : "{{currentDate}}", "auditUserCreateIp" : "192.168.1.1", "auditUserUpdateName" : "", "audituserUpdateDate" : null, "auditUserUpdateIp" : ""}
+
+update
+url - put
+http://localhost:8081/api/productbills/2
+pre-request-script
+const dateNow= new Date();
+pm.environment.set('currentDate', dateNow.toISOString());
+body-raw-json
+{ "id" : 2, "code" : "PB-002", "description" : "Cuenta Y Corriente"}
+
+delete
+url - delete
+http://localhost:8081/api/productbills/2
+body-raw-json
+{ "id" : 2, "code" : "PB-002", "description" : "Cuenta Y Corriente"}
